@@ -14,7 +14,7 @@ trait MailinatorImpl {
   val environment = Option(System.getenv("SCALA_ENV")).getOrElse("development")
   val baseUrl = "https://api.mailinator.com/api/"
 
-  val appKey = Option(System.getenv("TFL_API_KEY")) match {
+  val appKey = Option(System.getenv("MAILINATOR_API_KEY")) match {
     case None => config.as[Option[String]]( s"$environment.appKey" ) match {
       case Some(value) => value
       case _ => throw new ConfigurationException("appKey")

@@ -19,5 +19,8 @@ libraryDependencies ++= Seq(
     "net.ceedubs" %% "ficus" % "1.1.1",
     "org.json4s" %% "json4s-jackson" % "3.2.10",
     "net.databinder.dispatch" %% "dispatch-core" % "0.11.2",
-    "org.scalatest" % "scalatest_2.11" % "2.2.1" % "test"
+    "org.scalatest" % "scalatest_2.11" % "2.2.1" % "test",
+    "co.freeside" % "betamax" % "1.1.2" % "test",
+    "org.codehaus.groovy" % "groovy-all" % "1.8.8" % "compile"
+
 )
