@@ -21,8 +21,12 @@ import org.scalatest.time.SpanSugar._
 
 
 
-class InboxSpec extends FlatSpec with Matchers with AsyncAssertions {
+class InboxSpec extends FlatSpec with BeforeAndAfter  with Matchers with AsyncAssertions {
+  before {
+    System.setProperty("com.ning.http.client.AsyncHttpClientConfig.useProxyProperties","true")
+  }
   it should "return return a success instance" in {
+
     val recorder = new Recorder
     val proxyServer = new ProxyServer(recorder)
     val w = new Waiter
